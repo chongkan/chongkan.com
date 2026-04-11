@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Eduardo Chongkan — Digital Infrastructure & Identity</title>
+<meta name="description" content="Technology founder & architect. Building digital identity and verifiable credentials infrastructure for regulated institutions.">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="icon" type="image/jpeg" href="favicon.jpg">
+<style>
+  :root {
+    --bg: #0f1117;
+    --bg-card: #1a1d27;
+    --text: #e4e4e7;
+    --text-muted: #9ca3af;
+    --accent: #594FD3;
+    --accent-soft: rgba(89, 79, 211, 0.15);
+    --border: #2a2d3a;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .container {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 60px 24px 80px;
+  }
+
+  /* Hero */
+  .hero { margin-bottom: 48px; }
+  .hero h1 {
+    font-size: 32px;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    margin-bottom: 8px;
+  }
+  .hero .tagline {
+    font-size: 18px;
+    color: var(--text-muted);
+    margin-bottom: 16px;
+  }
+  .hero .location {
+    font-size: 14px;
+    color: var(--text-muted);
+  }
+  .hero .location::before {
+    content: '';
+    display: inline-block;
+    width: 6px; height: 6px;
+    background: #4ade80;
+    border-radius: 50%;
+    margin-right: 8px;
+    vertical-align: middle;
+  }
+
+  /* Contact row */
+  .contact-row {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+  }
+  .contact-row a {
+    font-size: 13px;
+    color: var(--accent);
+    text-decoration: none;
+    padding: 6px 14px;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    transition: all 0.2s;
+  }
+  .contact-row a:hover {
+    background: var(--accent-soft);
+    border-color: var(--accent);
+  }
+
+  /* Section */
+  .section {
+    margin-bottom: 40px;
+  }
+  .section h2 {
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: var(--accent);
+    margin-bottom: 16px;
+  }
+  .section p {
+    color: var(--text-muted);
+    font-size: 15px;
+    margin-bottom: 12px;
+  }
+
+  /* Attestto card */
+  .attestto-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 24px;
+    margin-bottom: 16px;
+  }
+  .attestto-card h3 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 4px;
+  }
+  .attestto-card .role {
+    font-size: 14px;
+    color: var(--accent);
+    margin-bottom: 12px;
+  }
+  .attestto-card p {
+    font-size: 14px;
+    color: var(--text-muted);
+    margin-bottom: 12px;
+  }
+  .attestto-card .tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+  .attestto-card .tag {
+    font-size: 11px;
+    padding: 3px 10px;
+    background: var(--accent-soft);
+    color: var(--accent);
+    border-radius: 4px;
+    font-weight: 500;
+  }
+
+  /* Experience list */
+  .exp-list { list-style: none; }
+  .exp-item {
+    padding: 16px 0;
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 16px;
+  }
+  .exp-item:last-child { border-bottom: none; }
+  .exp-item .left { flex: 1; }
+  .exp-item .company {
+    font-size: 15px;
+    font-weight: 600;
+  }
+  .exp-item .title {
+    font-size: 13px;
+    color: var(--text-muted);
+  }
+  .exp-item .detail {
+    font-size: 12px;
+    color: var(--text-muted);
+    margin-top: 4px;
+  }
+  .exp-item .dates {
+    font-size: 12px;
+    color: var(--text-muted);
+    white-space: nowrap;
+  }
+
+  /* Skills */
+  .skills-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+  @media (max-width: 500px) {
+    .skills-grid { grid-template-columns: 1fr; }
+  }
+  .skill-group h4 {
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 4px;
+  }
+  .skill-group p {
+    font-size: 13px;
+    color: var(--text-muted);
+    margin-bottom: 0;
+  }
+
+  /* Education */
+  .edu-item {
+    padding: 8px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+  .edu-item .school { font-size: 14px; }
+  .edu-item .degree { font-size: 13px; color: var(--text-muted); }
+  .edu-item .year { font-size: 12px; color: var(--text-muted); }
+
+  /* Footer */
+  .footer {
+    margin-top: 48px;
+    padding-top: 24px;
+    border-top: 1px solid var(--border);
+    font-size: 12px;
+    color: var(--text-muted);
+    text-align: center;
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+
+  <!-- HERO -->
+  <div class="hero">
+    <h1>Eduardo Chongkan</h1>
+    <div class="tagline">Digital Infrastructure & Identity Architect</div>
+    <div class="location">San Jose, Costa Rica</div>
+    <div class="contact-row">
+      <a href="mailto:e.chongkan@gmail.com">Email</a>
+      <a href="https://www.linkedin.com/in/eduardochongkan-804a1322" target="_blank">LinkedIn</a>
+      <a href="https://attestto.com" target="_blank">Attestto</a>
+    </div>
+  </div>
+
+  <!-- ABOUT -->
+  <div class="section">
+    <h2>About</h2>
+    <p>
+      Technology leader with 15+ years at the intersection of business and engineering in financial services and government. I build the infrastructure that institutions need to modernize — digital identity, verifiable credentials, payment integration, and process automation — while meeting regulatory requirements head-on.
+    </p>
+  </div>
+
+  <!-- ATTESTTO -->
+  <div class="section">
+    <h2>Current</h2>
+    <div class="attestto-card">
+      <h3>Attestto</h3>
+      <div class="role">Founder & Infrastructure Architect — 2020 – Present</div>
+      <p>
+        Digital identity and verifiable credentials platform for regulated institutions. Settlement engine with sub-second atomic finality. Sovereign data vaults with biometric authentication. Compliant with CONASSIF, Ley 8204 (AML/KYC), Ley 8968 (Data Protection), DORA, and W3C verifiable credentials standards.
+      </p>
+      <div class="tags">
+        <span class="tag">W3C VCs</span>
+        <span class="tag">WebAuthn</span>
+        <span class="tag">Ed25519</span>
+        <span class="tag">PKI</span>
+        <span class="tag">BPM</span>
+        <span class="tag">KYC/KYB</span>
+        <span class="tag">CONASSIF</span>
+        <span class="tag">DORA</span>
+        <span class="tag">vLEI</span>
+        <span class="tag">PCI DSS</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- EXPERIENCE -->
+  <div class="section">
+    <h2>Experience</h2>
+    <ul class="exp-list">
+      <li class="exp-item">
+        <div class="left">
+          <div class="company">Accenture</div>
+          <div class="title">Digital Marketing Technical Specialist</div>
+          <div class="detail">BBVA Americas — Colombia, Argentina, Chile, Mexico, USA</div>
+        </div>
+        <div class="dates">2020</div>
+      </li>
+      <li class="exp-item">
+        <div class="left">
+          <div class="company">Hangar Worldwide</div>
+          <div class="title">Tech Lead — DDC Advocacy & Citibank</div>
+          <div class="detail">UX research & A/B testing for Citi.com. Government services API architecture.</div>
+        </div>
+        <div class="dates">2013 – 2019</div>
+      </li>
+      <li class="exp-item">
+        <div class="left">
+          <div class="company">SourceTrace</div>
+          <div class="title">Software Architect & Android Developer</div>
+          <div class="detail">Banking apps and mobile POS for financial traceability</div>
+        </div>
+        <div class="dates">2011 – 2012</div>
+      </li>
+      <li class="exp-item">
+        <div class="left">
+          <div class="company">Sigma One / US Department of State</div>
+          <div class="title">Web Developer & Team Lead</div>
+          <div class="detail">CAFTA-DR informational sites. On-site with DOS officials in Washington DC.</div>
+        </div>
+        <div class="dates">2009 – 2011</div>
+      </li>
+      <li class="exp-item">
+        <div class="left">
+          <div class="company">BOSZ Digital</div>
+          <div class="title">Creative Engineer</div>
+          <div class="detail">Bank of America — Liferay CMS platform</div>
+        </div>
+        <div class="dates">2011</div>
+      </li>
+      <li class="exp-item">
+        <div class="left">
+          <div class="company">Hewlett-Packard</div>
+          <div class="title">IAP/RISS Support Engineer</div>
+          <div class="detail">Proliant servers L2, enterprise archiving platforms</div>
+        </div>
+        <div class="dates">2006 – 2010</div>
+      </li>
+    </ul>
+  </div>
+
+  <!-- SKILLS -->
+  <div class="section">
+    <h2>Expertise</h2>
+    <div class="skills-grid">
+      <div class="skill-group">
+        <h4>Digital Transformation</h4>
+        <p>BPM, RPA, workflow automation, process modernization, digital onboarding</p>
+      </div>
+      <div class="skill-group">
+        <h4>Agile & Delivery</h4>
+        <p>Scrum, Kanban, ScrumBan, Jira, CI/CD, sprint planning</p>
+      </div>
+      <div class="skill-group">
+        <h4>Financial Regulation</h4>
+        <p>CONASSIF, SUGEF, Ley 8204, DORA, PCI DSS, vLEI, CR firma digital</p>
+      </div>
+      <div class="skill-group">
+        <h4>Identity & Security</h4>
+        <p>DIDs, W3C VCs, WebAuthn, Ed25519, AES-256-GCM, PKI, OAuth, ZKP</p>
+      </div>
+      <div class="skill-group">
+        <h4>Engineering</h4>
+        <p>TypeScript, Node.js, Vue, REST APIs, Web Crypto, Docker, Azure, AWS</p>
+      </div>
+      <div class="skill-group">
+        <h4>Integrations</h4>
+        <p>Stripe, Wise, Plaid, tokenization, payment gateways</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- EDUCATION -->
+  <div class="section">
+    <h2>Education</h2>
+    <div class="edu-item">
+      <div>
+        <div class="school">Universidad Latina de Costa Rica</div>
+        <div class="degree">B.S. Systems Engineering</div>
+      </div>
+      <div class="year">2005</div>
+    </div>
+    <div class="edu-item">
+      <div>
+        <div class="school">TOEFL iBT Certified</div>
+        <div class="degree">ETS</div>
+      </div>
+      <div class="year">2015</div>
+    </div>
+  </div>
+
+  <!-- LANGUAGES -->
+  <div class="section">
+    <h2>Languages</h2>
+    <p>Spanish (native) &nbsp;&middot;&nbsp; English (advanced, TOEFL iBT certified)</p>
+  </div>
+
+  <div class="footer">
+    &copy; 2026 Eduardo Chongkan
+  </div>
+
+</div>
+
+</body>
+</html>
