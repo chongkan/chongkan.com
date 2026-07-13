@@ -3,14 +3,14 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Eduardo Chongkan — Digital Infrastructure & Identity</title>
-<meta name="description" content="Technology founder & architect. Building digital identity and verifiable credentials infrastructure for regulated institutions.">
+<title>Eduardo Chongkan — Decentralized Identity & Trust Systems Architect</title>
+<meta name="description" content="Architect of decentralized identity, storage, privacy, and blockchain trust infrastructure. I build the layers and own the seams between them: DIDs, verifiable credentials, national PKI, anchoring, and compliance as one system.">
 <link rel="canonical" href="https://chongkan.com">
 <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
 
 <!-- Open Graph -->
-<meta property="og:title" content="Eduardo Chongkan — Digital Infrastructure & Identity">
-<meta property="og:description" content="Technology founder & architect. Building digital identity and verifiable credentials infrastructure for regulated institutions.">
+<meta property="og:title" content="Eduardo Chongkan — Decentralized Identity & Trust Systems Architect">
+<meta property="og:description" content="I design and build trust infrastructure where decentralized identity, encrypted storage, blockchain anchoring, cryptographic signatures, and compliance work as one composed system.">
 <meta property="og:url" content="https://chongkan.com">
 <meta property="og:type" content="profile">
 <meta property="og:image" content="https://chongkan.com/favicon.jpg">
@@ -21,8 +21,8 @@
 
 <!-- Twitter Card -->
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Eduardo Chongkan — Digital Infrastructure & Identity">
-<meta name="twitter:description" content="Technology founder & architect. Building digital identity and verifiable credentials infrastructure for regulated institutions.">
+<meta name="twitter:title" content="Eduardo Chongkan — Decentralized Identity & Trust Systems Architect">
+<meta name="twitter:description" content="DIDs, verifiable credentials, national PKI, anchoring, privacy, and compliance built as one system.">
 <meta name="twitter:image" content="https://chongkan.com/favicon.jpg">
 
 <!-- Structured Data -->
@@ -32,9 +32,9 @@
   "@type": "Person",
   "name": "Eduardo Chongkan",
   "url": "https://chongkan.com",
-  "jobTitle": "Founder, CEO & Architect",
+  "jobTitle": "Decentralized Identity & Trust Systems Architect",
   "image": "https://chongkan.com/favicon.jpg",
-  "description": "Technology founder & architect. Building digital identity and verifiable credentials infrastructure for regulated institutions.",
+  "description": "Architect of decentralized identity, storage, privacy, and blockchain trust infrastructure. Builds the layers and owns the contracts between them.",
   "sameAs": [
     "https://www.linkedin.com/in/eduardochongkan-804a1322",
     "https://github.com/chongkan",
@@ -44,172 +44,252 @@
     "@type": "Organization",
     "name": "Attestto",
     "url": "https://attestto.com",
-    "description": "Sovereign identity infrastructure for regulated institutions"
+    "description": "Decentralized identity and trust infrastructure for institutions and citizens"
   },
   "workLocation": {
     "@type": "Place",
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "San Jose",
-      "addressCountry": "CR"
-    }
+    "address": { "@type": "PostalAddress", "addressLocality": "San Jose", "addressCountry": "CR" }
   },
-  "alumniOf": {
-    "@type": "CollegeOrUniversity",
-    "name": "Universidad Latina de Costa Rica"
-  },
+  "alumniOf": { "@type": "CollegeOrUniversity", "name": "Universidad Latina de Costa Rica" },
   "knowsAbout": [
-    "Digital Identity",
-    "Verifiable Credentials",
-    "W3C Standards",
-    "Public Key Infrastructure",
-    "Financial Regulation",
-    "Business Process Management"
+    "Decentralized Identity", "Verifiable Credentials", "W3C DID", "W3C VC",
+    "Public Key Infrastructure", "Digital Signatures", "Privacy Engineering",
+    "Blockchain Anchoring", "ISO 18013-5", "eIDAS", "Systems Architecture"
   ],
   "knowsLanguage": ["en", "es"],
-  "nationality": {
-    "@type": "Country",
-    "name": "Costa Rica"
-  }
+  "nationality": { "@type": "Country", "name": "Costa Rica" }
 }
 </script>
 
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
 <link rel="icon" type="image/jpeg" href="favicon.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
 <style>
   :root {
-    --bg: #0f1117;
-    --bg-card: #1a1d27;
-    --text: #e4e4e7;
-    --text-muted: #9ca3af;
-    --accent: #594FD3;
-    --accent-soft: rgba(89, 79, 211, 0.15);
-    --border: #2a2d3a;
+    --bg:        #080a08;
+    --bg-card:   #0f120f;
+    --text:      #ffffff;
+    --muted:     #cfd8cf;
+    --faint:     #808a80;
+    --accent:    #7ee787;
+    --accent-2:  #3fb950;
+    --accent-soft: rgba(126, 231, 135, 0.10);
+    --border:    #1b211b;
+    --border-2:  #262d26;
+    --mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+    --sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   }
 
   * { margin: 0; padding: 0; box-sizing: border-box; }
 
+  html { scroll-behavior: smooth; }
+
   body {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-family: var(--sans);
     background: var(--bg);
     color: var(--text);
-    line-height: 1.6;
+    line-height: 1.65;
     -webkit-font-smoothing: antialiased;
+    background-image:
+      radial-gradient(circle at 15% -10%, rgba(126,231,135,0.05), transparent 40%);
   }
+
+  ::selection { background: var(--accent-soft); color: var(--accent); }
+
+  a { color: var(--accent); text-decoration: none; }
 
   .container {
-    max-width: 720px;
+    max-width: 920px;
     margin: 0 auto;
-    padding: 60px 24px 80px;
+    padding: 80px 32px 100px;
   }
 
-  /* Hero */
-  .hero { margin-bottom: 48px; }
-  .hero h1 {
-    font-size: 32px;
-    font-weight: 700;
-    letter-spacing: -0.5px;
-    margin-bottom: 8px;
+  /* ---- Hero ---- */
+  .hero { margin-bottom: 56px; }
+  .hero .id-line {
+    font-family: var(--mono);
+    font-size: 12px;
+    color: var(--accent-2);
+    letter-spacing: 0.5px;
+    margin-bottom: 18px;
   }
+  .hero h1 {
+    font-size: 48px;
+    font-weight: 800;
+    letter-spacing: -1px;
+    line-height: 1.1;
+    margin-bottom: 12px;
+  }
+  .hero h1 .cursor {
+    color: var(--accent);
+    font-weight: 400;
+    animation: blink 1.2s steps(1) infinite;
+  }
+  @keyframes blink { 50% { opacity: 0; } }
   .hero .tagline {
-    font-size: 18px;
-    color: var(--text-muted);
-    margin-bottom: 16px;
+    font-size: 22px;
+    color: var(--text);
+    font-weight: 500;
+    margin-bottom: 14px;
   }
   .hero .location {
-    font-size: 14px;
-    color: var(--text-muted);
+    font-family: var(--mono);
+    font-size: 13px;
+    color: var(--muted);
   }
-  .hero .location::before {
-    content: '';
+  .hero .location .dot {
     display: inline-block;
-    width: 6px; height: 6px;
-    background: #4ade80;
+    width: 7px; height: 7px;
+    background: var(--accent);
     border-radius: 50%;
     margin-right: 8px;
     vertical-align: middle;
+    box-shadow: 0 0 8px var(--accent);
+  }
+  .hero .avail {
+    font-size: 15.5px;
+    color: var(--text);
+    margin-top: 16px;
+    max-width: 64ch;
   }
 
-  /* Contact row */
   .contact-row {
     display: flex;
-    gap: 16px;
+    gap: 10px;
     flex-wrap: wrap;
-    margin-top: 20px;
+    margin-top: 26px;
   }
   .contact-row a {
-    font-size: 13px;
-    color: var(--accent);
-    text-decoration: none;
-    padding: 6px 14px;
-    border: 1px solid var(--border);
-    border-radius: 6px;
-    transition: all 0.2s;
+    font-family: var(--mono);
+    font-size: 12.5px;
+    color: var(--text);
+    padding: 7px 14px;
+    border: 1px solid var(--border-2);
+    border-radius: 4px;
+    transition: all 0.15s ease;
   }
   .contact-row a:hover {
-    background: var(--accent-soft);
     border-color: var(--accent);
-  }
-
-  /* Section */
-  .section {
-    margin-bottom: 40px;
-  }
-  .section h2 {
-    font-size: 13px;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 1.5px;
     color: var(--accent);
+    background: var(--accent-soft);
+  }
+  .contact-row a::before { content: '↗ '; color: var(--faint); }
+  .contact-row a[href^="mailto"]::before { content: '✉ '; }
+
+  /* ---- Section ---- */
+  .section { margin-bottom: 52px; }
+  .section > h2 {
+    font-family: var(--mono);
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: lowercase;
+    letter-spacing: 0.5px;
+    color: var(--accent);
+    margin-bottom: 22px;
+    padding-bottom: 9px;
+    border-bottom: 1px solid var(--border-2);
+  }
+  .section > h2::before { content: '// '; color: var(--faint); }
+  .lead {
+    font-size: 19px;
+    color: var(--text);
     margin-bottom: 16px;
   }
   .section p {
-    color: var(--text-muted);
-    font-size: 15px;
-    margin-bottom: 12px;
+    color: var(--text);
+    font-size: 16.5px;
+    margin-bottom: 15px;
   }
+  .section p strong { color: var(--text); font-weight: 600; }
 
-  /* Attestto card */
-  .attestto-card {
-    background: var(--bg-card);
+  /* ---- Capabilities grid ---- */
+  .cap-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1px;
+    background: var(--border);
     border: 1px solid var(--border);
-    border-radius: 12px;
-    padding: 24px;
-    margin-bottom: 16px;
+    border-radius: 8px;
+    overflow: hidden;
   }
-  .attestto-card h3 {
-    font-size: 18px;
+  @media (max-width: 560px) { .cap-grid { grid-template-columns: 1fr; } }
+  .cap {
+    background: var(--bg-card);
+    padding: 18px 20px;
+  }
+  .cap h3 {
+    font-size: 15.5px;
     font-weight: 600;
-    margin-bottom: 4px;
+    margin-bottom: 7px;
+    color: var(--text);
   }
-  .attestto-card .role {
-    font-size: 14px;
+  .cap h3::before {
+    content: '▍';
     color: var(--accent);
-    margin-bottom: 12px;
+    margin-right: 8px;
   }
-  .attestto-card p {
+  .cap p {
     font-size: 14px;
-    color: var(--text-muted);
-    margin-bottom: 12px;
-  }
-  .attestto-card .tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 6px;
-  }
-  .attestto-card .tag {
-    font-size: 11px;
-    padding: 3px 10px;
-    background: var(--accent-soft);
-    color: var(--accent);
-    border-radius: 4px;
-    font-weight: 500;
+    color: var(--muted);
+    margin: 0;
+    line-height: 1.6;
   }
 
-  /* Experience list */
+  /* ---- Signature list ---- */
+  .sig-list { list-style: none; }
+  .sig-list li {
+    font-size: 16px;
+    color: var(--text);
+    padding: 11px 0 11px 28px;
+    position: relative;
+    border-bottom: 1px dashed var(--border-2);
+  }
+  .sig-list li:last-child { border-bottom: none; }
+  .sig-list li::before {
+    content: '›';
+    position: absolute;
+    left: 4px;
+    color: var(--accent);
+    font-weight: 700;
+  }
+
+  /* ---- Flagship card ---- */
+  .flagship {
+    background: var(--bg-card);
+    border: 1px solid var(--border-2);
+    border-left: 2px solid var(--accent);
+    border-radius: 8px;
+    padding: 24px;
+    margin-bottom: 18px;
+  }
+  .flagship h3 { font-size: 19px; font-weight: 700; margin-bottom: 4px; }
+  .flagship .role {
+    font-family: var(--mono);
+    font-size: 12.5px;
+    color: var(--accent-2);
+    margin-bottom: 14px;
+  }
+  .flagship p { font-size: 15px; color: var(--text); margin-bottom: 16px; line-height: 1.7; }
+  .proof-links {
+    display: flex; flex-wrap: wrap; gap: 8px;
+  }
+  .proof-links a {
+    font-family: var(--mono);
+    font-size: 11.5px;
+    padding: 5px 11px;
+    border: 1px solid var(--border-2);
+    border-radius: 4px;
+    color: var(--text);
+    transition: all 0.15s;
+  }
+  .proof-links a:hover { border-color: var(--accent); color: var(--accent); }
+
+  /* ---- Experience ---- */
   .exp-list { list-style: none; }
   .exp-item {
-    padding: 16px 0;
+    padding: 14px 0;
     border-bottom: 1px solid var(--border);
     display: flex;
     justify-content: space-between;
@@ -217,237 +297,237 @@
     gap: 16px;
   }
   .exp-item:last-child { border-bottom: none; }
-  .exp-item .left { flex: 1; }
-  .exp-item .company {
-    font-size: 15px;
-    font-weight: 600;
-  }
-  .exp-item .title {
-    font-size: 13px;
-    color: var(--text-muted);
-  }
-  .exp-item .detail {
-    font-size: 12px;
-    color: var(--text-muted);
-    margin-top: 4px;
-  }
+  .exp-item .company { font-size: 16px; font-weight: 600; }
+  .exp-item .title { font-size: 14px; color: var(--muted); }
   .exp-item .dates {
+    font-family: var(--mono);
+    font-size: 12px; color: var(--faint); white-space: nowrap;
+  }
+
+  /* ---- Stack chips ---- */
+  .stack-group { margin-bottom: 18px; }
+  .stack-group h4 {
+    font-family: var(--mono);
     font-size: 12px;
-    color: var(--text-muted);
-    white-space: nowrap;
+    color: var(--muted);
+    margin-bottom: 10px;
+    font-weight: 500;
   }
+  .chips { display: flex; flex-wrap: wrap; gap: 6px; }
+  .chip {
+    font-family: var(--mono);
+    font-size: 11.5px;
+    padding: 4px 10px;
+    background: var(--accent-soft);
+    color: var(--accent);
+    border-radius: 4px;
+  }
+  .chip.plain { background: transparent; color: var(--muted); border: 1px solid var(--border-2); }
 
-  /* Skills */
-  .skills-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 12px;
+  /* ---- Meta rows ---- */
+  .meta-row {
+    display: flex; justify-content: space-between; align-items: baseline;
+    padding: 8px 0; gap: 16px;
   }
-  @media (max-width: 500px) {
-    .skills-grid { grid-template-columns: 1fr; }
-  }
-  .skill-group h4 {
-    font-size: 12px;
-    font-weight: 600;
-    color: var(--text);
-    margin-bottom: 4px;
-  }
-  .skill-group p {
-    font-size: 13px;
-    color: var(--text-muted);
-    margin-bottom: 0;
-  }
+  .meta-row .k { font-size: 14px; color: var(--text); }
+  .meta-row .v { font-size: 13px; color: var(--muted); }
+  .meta-row .y { font-family: var(--mono); font-size: 12px; color: var(--faint); }
 
-  /* Education */
-  .edu-item {
-    padding: 8px 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
-  }
-  .edu-item .school { font-size: 14px; }
-  .edu-item .degree { font-size: 13px; color: var(--text-muted); }
-  .edu-item .year { font-size: 12px; color: var(--text-muted); }
-
-  /* Footer */
+  /* ---- Footer ---- */
   .footer {
-    margin-top: 48px;
+    margin-top: 60px;
     padding-top: 24px;
     border-top: 1px solid var(--border);
+    font-family: var(--mono);
     font-size: 12px;
-    color: var(--text-muted);
-    text-align: center;
+    color: var(--faint);
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 8px;
   }
+  .footer a { color: var(--muted); }
+  .footer a:hover { color: var(--accent); }
 </style>
 </head>
 <body>
-
 <div class="container">
 
   <!-- HERO -->
   <header class="hero">
-    <h1>Eduardo Chongkan</h1>
-    <div class="tagline">Digital Infrastructure & Identity Architect</div>
-    <div class="location">San Jose, Costa Rica</div>
+    <div class="id-line">~/ decentralized identity · storage · privacy · trust</div>
+    <h1>Eduardo Chongkan<span class="cursor">_</span></h1>
+    <div class="tagline">Decentralized Identity &amp; Trust Systems Architect</div>
+    <div class="location"><span class="dot"></span>San José, Costa Rica · works globally / remote</div>
+    <p class="avail">Open to consulting engagements and collaboration in decentralized identity, verifiable credentials, digital signatures, privacy, and blockchain trust infrastructure.</p>
     <div class="contact-row">
       <a href="mailto:e.chongkan@gmail.com">Email</a>
-      <a href="https://www.linkedin.com/in/eduardochongkan-804a1322" target="_blank">LinkedIn</a>
-      <a href="https://attestto.com" target="_blank">Attestto</a>
+      <a href="https://www.linkedin.com/in/eduardochongkan-804a1322" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://github.com/chongkan" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://attestto.com" target="_blank" rel="noopener">Attestto</a>
     </div>
   </header>
 
   <main>
 
-  <!-- ABOUT -->
+  <!-- POSITIONING -->
   <section class="section">
-    <h2>About</h2>
-    <p>
-      Technology leader with 15+ years at the intersection of business and engineering in financial services and government. I build the infrastructure that institutions need to modernize — digital identity, verifiable credentials, payment integration, and process automation — while meeting regulatory requirements head-on.
-    </p>
+    <h2>positioning</h2>
+    <p class="lead">I build trust infrastructure where decentralized identity, encrypted storage, blockchain anchoring, cryptographic signatures, and regulatory compliance are not separate products but one composed system.</p>
+    <p>Most people in this space specialize in a single layer. My differentiator is the seam: making a verifiable credential, a national PKI signature, an on-chain anchor, a privacy-preserving disclosure, and a data-protection requirement work as one coherent flow that a regulator, a CTO, and an end user can each trust for their own reasons. I design the architecture, write the code, engage the regulator, and shape the model that makes it sustainable.</p>
   </section>
 
-  <!-- ATTESTTO -->
+  <!-- CAPABILITIES -->
   <section class="section">
-    <h2>Current</h2>
-    <div class="attestto-card">
+    <h2>capabilities</h2>
+    <div class="cap-grid">
+      <div class="cap">
+        <h3>Decentralized identity &amp; VCs</h3>
+        <p>Full lifecycle: DID method selection and authoring, issuance, holder wallets, presentation, verification, and graded assurance. W3C DID/VC, OpenID4VC, ISO 18013-5 (mDL), eIDAS 2.0 / EUDI.</p>
+      </div>
+      <div class="cap">
+        <h3>Cryptography, PKI &amp; signatures</h3>
+        <p>Applied crypto and national PKI integration, bridging classical X.509 into the DID world. PAdES verification, point-in-time authority, Ed25519, Shamir recovery.</p>
+      </div>
+      <div class="cap">
+        <h3>Decentralized storage &amp; vaults</h3>
+        <p>Encrypted personal stores plus peer-replicated durability under an anchor-not-store discipline. Recovery separated from custody so it never becomes impersonation.</p>
+      </div>
+      <div class="cap">
+        <h3>Blockchain anchoring</h3>
+        <p>Public chains as neutral timestamping and tamper-evidence, deliberately token-free and securities-aware, with users never holding chain keys.</p>
+      </div>
+      <div class="cap">
+        <h3>Privacy engineering</h3>
+        <p>Privacy as an architectural property: zero-correlation via pairwise identifiers, data minimization, selective disclosure, consent receipts.</p>
+      </div>
+      <div class="cap">
+        <h3>Compliance &amp; legal-technical</h3>
+        <p>Mapping a feature to its legal basis and its security and privacy obligations in one register a regulator and a CTO can both read. SOC 2, NIST CSF, CIS v8, data-protection regimes.</p>
+      </div>
+    </div>
+    <p style="margin-top:20px;"><strong>The spine is systems integration:</strong> owning the contracts between identity, storage, crypto, chain, privacy, and law so the composed system holds. That is the reason to hire me over a set of specialists.</p>
+  </section>
+
+  <!-- SIGNATURE CAPABILITIES -->
+  <section class="section">
+    <h2>things few people can do</h2>
+    <ul class="sig-list">
+      <li>Reconcile unlinkable-by-default identity with legally-attributable-on-demand signatures in one architecture.</li>
+      <li>Anchor to a public chain while staying compatible with a legal right to deletion.</li>
+      <li>Bridge a national X.509 PKI into a DID / VC verification flow.</li>
+      <li>Author a DID method specification and take it through a standards process.</li>
+      <li>Produce one feature-by-feature register that satisfies a technical reviewer, a privacy officer, and a regulator at once.</li>
+      <li>Design a token-free blockchain trust layer that survives securities scrutiny.</li>
+      <li>Separate recovery from custody so recoverability never creates an impersonation path.</li>
+    </ul>
+  </section>
+
+  <!-- SELECTED WORK / PROOF -->
+  <section class="section">
+    <h2>selected work</h2>
+    <div class="flagship">
       <h3>Attestto</h3>
-      <div class="role">Founder, CEO & Architect — 2020 – Present</div>
-      <p>
-        Digital identity and verifiable credentials platform for regulated institutions. Settlement engine with sub-second atomic finality. Sovereign data vaults with biometric authentication. Compliant with CONASSIF, Ley 8204 (AML/KYC), Ley 8968 (Data Protection), DORA, and W3C verifiable credentials standards.
-      </p>
-      <div class="tags">
-        <span class="tag">W3C VCs</span>
-        <span class="tag">WebAuthn</span>
-        <span class="tag">Ed25519</span>
-        <span class="tag">PKI</span>
-        <span class="tag">BPM</span>
-        <span class="tag">KYC/KYB</span>
-        <span class="tag">CONASSIF</span>
-        <span class="tag">DORA</span>
-        <span class="tag">vLEI</span>
-        <span class="tag">PCI DSS</span>
+      <div class="role">Founder &amp; architect · 2020 – present</div>
+      <p>Decentralized identity and trust infrastructure for institutions and citizens: per-site pairwise sign-in, verifiable-credential issuance, verification of Costa Rica's national digital signatures (PAdES), blockchain anchoring, and encrypted vaults. Two DID method specifications authored (did:sns, did:pki) and a live did:pki resolver bridging national PKI into DID-based verification. Designed against Costa Rica's Ley 8454 (digital signature) and Ley 8968 (data protection); security program targeting SOC 2 with NIST CSF controls in operation.</p>
+      <div class="proof-links">
+        <a href="https://verify.attestto.com" target="_blank" rel="noopener">verify.attestto.com</a>
+        <a href="https://spec.attestto.com/did-pki" target="_blank" rel="noopener">did:pki spec</a>
+        <a href="https://www.npmjs.com/package/@attestto/login" target="_blank" rel="noopener">@attestto/login</a>
+        <a href="https://github.com/Attestto-com" target="_blank" rel="noopener">github/Attestto-com</a>
+        <a href="https://github.com/chongkan" target="_blank" rel="noopener">github/chongkan</a>
       </div>
     </div>
   </section>
 
   <!-- EXPERIENCE -->
   <section class="section">
-    <h2>Experience</h2>
+    <h2>earlier experience</h2>
+    <p>Fifteen-plus years at the intersection of engineering and business across financial services and government, before founding Attestto.</p>
     <ul class="exp-list">
       <li class="exp-item">
-        <div class="left">
-          <div class="company">Accenture</div>
-          <div class="title">Digital Marketing Platform Lead — Project Kickstart</div>
-          <div class="detail">BBVA Americas — Adobe Marketing Cloud infrastructure, team formation, and process design across Colombia, Argentina, Chile, Mexico, USA</div>
-        </div>
+        <div><div class="company">Accenture</div><div class="title">Digital platform lead · BBVA Americas (CO, AR, CL, MX, US)</div></div>
         <div class="dates">2020</div>
       </li>
       <li class="exp-item">
-        <div class="left">
-          <div class="company">Hangar Worldwide</div>
-          <div class="title">Tech Lead — DDC Advocacy & Citibank</div>
-          <div class="detail">UX research & A/B testing for Citi.com. Government services API architecture.</div>
-        </div>
+        <div><div class="company">Hangar Worldwide</div><div class="title">Tech lead · Citibank, government services APIs</div></div>
         <div class="dates">2013 – 2019</div>
       </li>
       <li class="exp-item">
-        <div class="left">
-          <div class="company">SourceTrace</div>
-          <div class="title">Software Architect & Android Developer</div>
-          <div class="detail">Banking apps and mobile POS for financial traceability</div>
-        </div>
+        <div><div class="company">SourceTrace</div><div class="title">Software architect · banking &amp; mobile POS</div></div>
         <div class="dates">2011 – 2012</div>
       </li>
       <li class="exp-item">
-        <div class="left">
-          <div class="company">Sigma One / US Department of State</div>
-          <div class="title">Web Developer & Team Lead</div>
-          <div class="detail">CAFTA-DR informational sites. On-site with DOS officials in Washington DC.</div>
-        </div>
+        <div><div class="company">Sigma One / US Department of State</div><div class="title">Web developer &amp; team lead · CAFTA-DR, on-site Washington DC</div></div>
         <div class="dates">2009 – 2011</div>
       </li>
       <li class="exp-item">
-        <div class="left">
-          <div class="company">BOSZ Digital</div>
-          <div class="title">Creative Engineer</div>
-          <div class="detail">Bank of America — Liferay CMS platform</div>
-        </div>
-        <div class="dates">2011</div>
-      </li>
-      <li class="exp-item">
-        <div class="left">
-          <div class="company">Hewlett-Packard</div>
-          <div class="title">IAP/RISS Support Engineer</div>
-          <div class="detail">Proliant servers L2, enterprise archiving platforms</div>
-        </div>
+        <div><div class="company">Hewlett-Packard</div><div class="title">Support engineer · enterprise servers &amp; archiving</div></div>
         <div class="dates">2006 – 2010</div>
       </li>
     </ul>
   </section>
 
-  <!-- SKILLS -->
+  <!-- STACK -->
   <section class="section">
-    <h2>Expertise</h2>
-    <div class="skills-grid">
-      <div class="skill-group">
-        <h4>Digital Transformation</h4>
-        <p>BPM, RPA, workflow automation, process modernization, digital onboarding</p>
+    <h2>stack &amp; standards</h2>
+    <div class="stack-group">
+      <h4>standards</h4>
+      <div class="chips">
+        <span class="chip">W3C DID</span><span class="chip">W3C VC</span><span class="chip">OpenID4VC</span>
+        <span class="chip">ISO 18013-5</span><span class="chip">eIDAS 2.0 / EUDI</span>
+        <span class="chip">PAdES / X.509</span><span class="chip">RFC 9421</span>
       </div>
-      <div class="skill-group">
-        <h4>Agile & Delivery</h4>
-        <p>Scrum, Kanban, ScrumBan, Jira, CI/CD, sprint planning</p>
+    </div>
+    <div class="stack-group">
+      <h4>frameworks</h4>
+      <div class="chips">
+        <span class="chip">SOC 2 (target)</span><span class="chip">NIST CSF</span><span class="chip">CIS v8</span>
+        <span class="chip">Ley 8454</span><span class="chip">Ley 8968</span>
       </div>
-      <div class="skill-group">
-        <h4>Financial Regulation</h4>
-        <p>CONASSIF, SUGEF, Ley 8204, DORA, PCI DSS, vLEI, CR firma digital</p>
+    </div>
+    <div class="stack-group">
+      <h4>identity &amp; crypto</h4>
+      <div class="chips">
+        <span class="chip plain">DIDs</span><span class="chip plain">Verifiable Credentials</span><span class="chip plain">WebAuthn</span>
+        <span class="chip plain">Ed25519 / P-256</span><span class="chip plain">AES-256-GCM</span><span class="chip plain">Shamir SSS</span>
+        <span class="chip plain">PKI</span><span class="chip plain">selective disclosure</span><span class="chip plain">ZKP</span>
       </div>
-      <div class="skill-group">
-        <h4>Identity & Security</h4>
-        <p>DIDs, W3C VCs, WebAuthn, Ed25519, AES-256-GCM, PKI, OAuth, ZKP</p>
-      </div>
-      <div class="skill-group">
-        <h4>Engineering</h4>
-        <p>TypeScript, Node.js, Vue, REST APIs, Web Crypto, Docker, Azure, AWS</p>
-      </div>
-      <div class="skill-group">
-        <h4>Integrations</h4>
-        <p>Stripe, Wise, Plaid, tokenization, payment gateways</p>
+    </div>
+    <div class="stack-group">
+      <h4>engineering</h4>
+      <div class="chips">
+        <span class="chip plain">TypeScript</span><span class="chip plain">Node.js</span><span class="chip plain">Vue</span>
+        <span class="chip plain">Web Crypto</span><span class="chip plain">Solana / Anchor</span><span class="chip plain">libp2p</span>
+        <span class="chip plain">Docker</span><span class="chip plain">AWS / Azure</span>
       </div>
     </div>
   </section>
 
-  <!-- EDUCATION -->
+  <!-- EDUCATION / LANGUAGES -->
   <section class="section">
-    <h2>Education</h2>
-    <div class="edu-item">
-      <div>
-        <div class="school">Universidad Latina de Costa Rica</div>
-        <div class="degree">B.S. Systems Engineering</div>
-      </div>
-      <div class="year">2005</div>
+    <h2>education &amp; languages</h2>
+    <div class="meta-row">
+      <div class="k">Universidad Latina de Costa Rica <span class="v">· B.S. Systems Engineering</span></div>
+      <div class="y">2005</div>
     </div>
-    <div class="edu-item">
-      <div>
-        <div class="school">TOEFL iBT Certified</div>
-        <div class="degree">ETS</div>
-      </div>
-      <div class="year">2015</div>
+    <div class="meta-row">
+      <div class="k">TOEFL iBT <span class="v">· ETS certified</span></div>
+      <div class="y">2015</div>
     </div>
-  </section>
-
-  <!-- LANGUAGES -->
-  <section class="section">
-    <h2>Languages</h2>
-    <p>Spanish (native) &nbsp;&middot;&nbsp; English (advanced, TOEFL iBT certified)</p>
+    <div class="meta-row">
+      <div class="k">Languages <span class="v">· Spanish (native) · English (advanced)</span></div>
+      <div class="y"></div>
+    </div>
   </section>
 
   </main>
 
   <footer class="footer">
-    &copy; 2026 Eduardo Chongkan
+    <span>© 2026 Eduardo Chongkan</span>
+    <span>chongkan.com</span>
   </footer>
 
 </div>
-
 </body>
 </html>
